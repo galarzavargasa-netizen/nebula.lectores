@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nebula Lectores</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Nebula Lectores 📚✨</h1>
+    <p>Tu biblioteca secreta en el espacio digital</p>
+  </header>
+
+  <!-- Perfil -->
+  <section class="perfil">
+    <img id="avatarPrincipal" src="default.png" alt="Foto de perfil">
+    <div>
+      <h2 id="username">Usuario Nebula</h2>
+      <p>Lector estelar ✨</p>
+      <input type="file" id="uploadPrincipal" accept="image/*">
+    </div>
+  </section>
+
+  <!-- Formulario agregar libro -->
+  <section class="formulario">
+    <input type="text" id="inputLibro" placeholder="Nombre del libro">
+    <input type="text" id="inputAutor" placeholder="Autor">
+    <select id="inputCategoria">
+      <option value="">Categoría</option>
+      <option value="Fantasía">Fantasía</option>
+      <option value="Misterio">Misterio</option>
+      <option value="Romance">Romance</option>
+      <option value="Ciencia Ficción">Ciencia Ficción</option>
+      <option value="Otro">Otro</option>
+    </select>
+    <button id="agregarLibro">Agregar Libro</button>
+  </section>
+
+  <!-- Buscador -->
+  <section class="buscador">
+    <input type="text" id="buscarLibro" placeholder="Buscar libro...">
+  </section>
+
+  <!-- Estadísticas -->
+  <section class="stats">
+    <span id="totalLibros">📚 Total: 0</span>
+  </section>
+
+  <!-- Lista de libros -->
+  <section class="biblioteca">
+    <div id="listaLibros" class="grid"></div>
+  </section>
+
+  <!-- Botón configuración -->
+  <button id="abrirConfig" class="btn-config">⚙️ Configuración</button>
+
+  <!-- Modal configuración -->
+  <div id="configModal" class="modal">
+    <div class="modal-content">
+      <span id="cerrarConfig" class="close">&times;</span>
+      <h2>Configuración de Perfil</h2>
+
+      <label>Foto de perfil:</label>
+      <img id="avatarModal" src="default.png" alt="Foto de perfil">
+      <input type="file" id="uploadModal" accept="image/*">
+
+      <label>Nombre de usuario:</label>
+      <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre">
+
+      <button id="guardarPerfil">Guardar cambios</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Nebula Lectores 🚀</p>
+  </footer>
+
+</body>
+</html>
